@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-blue w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>SHYLA<br>DUFF</b></h3>
+  <h5 class="w3-padding-25 w3-center"><i><b>Major</b>: Digital Culture and Design</i></h5>
+  <h5 class="w3-padding-25 w3-center"><i><b>Minor</b>: Film and Production Studies</i></h5>
+  <br>
+  <br>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-text-dark-blue w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">SHYLA DUFF</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+
+    <div class="w3-third">
+      <img src="minimalistposterfinished.png" style="width:100%" onclick="onClick(this)" alt="Using Adobe Illustrator I created a minimalist poster of the video game The Legend Of Zelda: Link's Awakening 2019 remake. <i>Vertical video game poster that reads 'The Legend of Zelda Link's Awakening (2019)' with a light green background. Link is holding his Hylian shield and his sword. Mt. Tamaranch is above him in the clouds with the Windfish's Egg on top.</i>">
+      >
+      <img src="hoppyeaster.png" style="width:100%" onclick="onClick(this)" alt="Using Adobe Illustrator I designed this Easter greeting card that I also printed out and mailed to family. <i>Vertical Easter card with a light blue background and text that reads 'Hoppy Easter'. There are different colored easter eggs across the card and the ears and top part of a bunny's head is at the bottom of the card.</i>">
+
+      <img src="icecreamflavors.png" style="width:100%" onclick="onClick(this)" alt="Using Adobe Illustrator I designed this ice cream flavor graphic. <i>Horizontal design with a periwinkle/lavender background and three white ice cream/popsicles next to each other with cow print in the colors pink, mint, and brown. The text reads from left to right 'Strawberry, Mint, Chocolate' and corresponds with each popsicle.</i>">
+    </div>
+
+    <div class="w3-third">
+      <img src="product.jpeg" style="width:100%" onclick="onClick(this)" alt="Photograph I took for the Children's Recovery Center's Instagram account as their social media intern. They sell these stickers to raise money for their non-profit organization. <i>A circular sticker on a white background with a pink heart pattern and pink flowers. The sticker reads 'One Love One Heart' with two hands making the shape of a heart. There are candy hearts placed around it on a pink ribbon.</i>">
+
+      <img src="frankenstein.png" style="width:100%" onclick="onClick(this)" alt="Photograph I took in the Bookstagram style of the novel Frankenstein by Mary Shelley.  <i>A black, silver, and red book titled 'Frankenstein Mary Shelley.' The book is on a half white and half black lace background. To the left of the book is a silver chain and to the far left is a black mug with a tea bag. To the upper right of the book is a red metallic necklace that looks like blood dripping.</i>">
+      
+      <img src="littlewomen.png" style="width:100%" onclick="onClick(this)" alt="Photograph I took in the Bookstagram style of the anniversary edition of the novel Little Women by Louisa May Alcott. <i>A pink book titled 'Little Women And Other Novels Louisa May Alcott' in white font with gold accents and a gold sticker that says 'Barnes and Noble Exclusive.' The book is centered on a white cloth/lace background. To the left of the book is a tea bag and the tag says 'Vanilla Chai.'' To the right are pink flowers and a yellow daisy.</i>">
+
+      <img src="DCDsticker.png" style="width:100%" onclick="onClick(this)" alt="Digital Culture and Design sticker I designed using Adobe Illustrator. <i>Circular sticker that reads 'Digital Culture' at the top, 'DCD' in the middle, 'And Design' at the bottom. The top and bottom text are curved to resemble the shape of the sticker. The colors are white, lavender, and periwinkle.</i>">
+    </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  <!-- About section -->
+  <div class="w3-container w3-light-blue w3-center w3-text-white w3-padding-32">
+  <br> 
+  <h4>ABOUT ME</h4>
+    <img src="flatportrait.jpeg" width="200" height="250" alt="Flat Portrait">
+    <div class="w3-content w3-justify" style="max-width:600px">
+<p><b>I am currently a senior at Coastal Carolina University. I am majoring in Digital Culture and Design with a minor in Film and Production Studies. I am very interested in all aspects of video production but am very passionate about video editing. 
+<br>
+<br>
+My career aspirations revolve around education in the digital media sphere. I see mysef working with a company that prioritizes education and creates digital media projects that specialize in nonfictional topics. For example, the news or academic subjects such as history and science.
+<br>
+<br>
+I would describe my aesthetic as being vibrant and colorful in a way that draws the viewer in. I want my projects to be engaging and visually appealing. I also want them to be versatile and to be able to shown on multiple platforms such as a website, print, mobile, or on social media platforms. I take a lot of inspiration from PBS's digital presence on YouTube with their PBS Eons channel and Discovery's Animal Planet and Science Channel's presence on TikTok.</b>
+      </p>
+      <p><b><em>email: sgduff@coastal.edu</em></b></p>
+  <br>
+  <div class="w3-light-grey w3-center w3-padding-24">Link to my YouTube <a href="https://www.youtube.com/channel/UC8H-y4ywO_XTaJYaoKhmfTg" title="YouTube Portfolio" target="_blank" class="w3-hover-opacity">Portfolio</a></div>
+</div>
+<br>
+   <img src="logotype.jpeg" width="200" height="200" alt="Logotype">
+
+<!-- End page content -->
+</div>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+</html>
